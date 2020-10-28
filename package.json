@@ -26,6 +26,7 @@
   "browser": {
     "./sfc": "src/el-data-tree.vue"
   },
+  "types": "src/el-data-tree.d.ts",
   "scripts": {
     "dev": "vue-styleguidist server",
     "test": "jest",
