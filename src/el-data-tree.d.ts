@@ -1,6 +1,6 @@
 import Vue, {VueConstructor, VNode} from 'vue'
 
-import {Form, Tree} from 'element-ui/types/element-ui'
+import {Form, Tree} from '@femessage/types/element-ui'
 
 declare module '@femessage/el-data-tree' {
   class FemessageComponent extends Vue {
@@ -72,7 +72,8 @@ declare module '@femessage/el-data-tree' {
     show: (data: any, node: any) => boolean
   }
 
-  type ElDataTreeProps = {
+  // props 全都有默认值，都是可选的
+  export type ElDataTreeProps = Partial<{
     title: string
     hasBorder: boolean
     treeAttrs: Tree
@@ -102,13 +103,13 @@ declare module '@femessage/el-data-tree' {
     editText: string
     deleteText: string
     collapsable: boolean
-  }
+  }>
 
   type ElDataTree = Combined<
     ElDataTreeData,
     ElDataTreeMethods,
     ElDataTreeComputed,
-    ElDataTreeProps
+    Required<ElDataTreeProps>
   >
 
   export interface ElDataTreeType extends FemessageComponent, ElDataTree {}
@@ -118,7 +119,7 @@ declare module '@femessage/el-data-tree' {
     ElDataTreeData,
     ElDataTreeMethods,
     ElDataTreeComputed,
-    ElDataTreeProps
+    Required<ElDataTreeProps>
   >
 
   export default ElDataTreeConstruction

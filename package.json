@@ -40,6 +40,7 @@
     "release": "gren release --override"
   },
   "dependencies": {
+    "@femessage/types": "^1.0.2",
     "lodash.get": "^4.4.2"
   },
   "devDependencies": {
