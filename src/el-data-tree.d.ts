@@ -76,7 +76,7 @@ declare module '@femessage/el-data-tree' {
   export type ElDataTreeProps = Partial<{
     title: string
     hasBorder: boolean
-    treeAttrs: Tree
+    treeAttrs: Partial<Tree>
     url: string
     parentKey: string
     dataPath: string
@@ -85,7 +85,7 @@ declare module '@femessage/el-data-tree' {
     extraButtons: ExtraButton[]
     extraButtonsType: ExtraButtonType
     form: FormContent
-    formAttrs: Form
+    formAttrs: Partial<Form>
     extraParams: object
     customQuery: object
     hasOperation: boolean
